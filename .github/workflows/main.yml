@@ -25,6 +25,9 @@ jobs:
       - name: Run test suite
         run: |
           pipenv run pytest
+      - name: Generate Test Coverage
+        run: | 
+          pipenv run pytest --cov=app
       - name: Change python version
         run: |
           pipenv --python 3.9
